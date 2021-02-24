@@ -6,7 +6,7 @@
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/24 13:31:57 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/24 14:45:12 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/02/24 15:18:56 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main(void){
     ::iter(f, 5, &display);
     std::cout << std::endl;
 
+    Awesome(6);
     return 0;
     
 }
