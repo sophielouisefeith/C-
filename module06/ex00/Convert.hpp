@@ -6,7 +6,7 @@
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/19 10:42:44 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/19 14:48:23 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/02/23 12:31:59 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,15 @@
 // /*void * d = &a                               implicita tepreation 
 // */
 
+#pragma once
+
 #include <string>
 #include <iostream>
 #include <iomanip> // fixed, setprecision
 #include <cctype> // isprint
 #include <cmath> // isinf, isnan
 #include <sstream> // stringstream
+#include <iomanip> // fixed, setprecision
 
 # define RESET			"\033[0m"
 # define YELLOW			"\033[33m"				/* Yellow */

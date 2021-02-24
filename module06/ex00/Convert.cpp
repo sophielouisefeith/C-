@@ -6,7 +6,7 @@
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/19 13:00:06 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/19 15:48:51 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/02/23 12:01:17 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Convert &Convert:: operator=(const Convert & rsh){
 
 Convert::~Convert(){
 
-    std::cout << "deconstructor " << std::endl;
+    std::cout << BLUE<< " by by ----deconstructor " << std::endl;
     return;
 }
 
@@ -66,19 +66,22 @@ Convert* Convert::toChar(){
     safe << _output;
     safe >> c;
     std::cout << " We want to convert " << YELLOW <<GetOutput() << RESET <<" to  a char "  << std::endl;
+    /* has to be one character  */
     if(_output.size() == 1 && !isdigit(_output[0])){
         if (isprint(c))
 		    std::cout << "char: " << '\'' << c << '\'' << std::endl;
         else 
 		    std::cout << "char: Non displayable" << std::endl;
     }
-    else if(_output == "nan" || _output == "+inf" || _output == "-inf" || \
-		_output.find('.') != std::string::npos)
-		std::cout << "char: impossible" << std::endl;
+    /*has to be no nan inf inf */
+    else if(_output == "nan" || _output == "+inf" || _output == "-inf")
+   // || _output.find('.') != std::string::npos) even later naar kijken wel of niet aan.
+		    std::cout << "char: impossible" << std::endl;
     else 
         try{
-            //int const	i = static_cast<int const>(c);
+            /* string to int. */
             int c = std::stoi(_output);
+            /*two statments is it beween the asccii to convert it to a int, is it printable. */
             if (c >= -128 && c < 128) (std::isprint(c)) ?
                 std::cout << "char: '" << static_cast<char>(c) << "'" << std::endl :
                 std::cout << "char: Non displayable" << std::endl;
@@ -90,8 +93,13 @@ Convert* Convert::toChar(){
 
 Convert* Convert::toInt(){
 
-
     std::cout << " We want to convert " << YELLOW <<GetOutput() << RESET <<" to  a int "  << std::endl;
+    if (_output == "nan" || _output == "inf")
+        std::cout << "int: impossible" << std::endl;
+    else try { std::cout << "int: " << std::stoi(_output) << std::endl; }
+        catch (std::exception &e) { std::cout << " impossible" << std::endl;}
+    return this;
+    
     return this;
     
 }
@@ -101,7 +109,12 @@ Convert* Convert::toDouble(){
 
 
     std::cout << " We want to convert " << YELLOW <<GetOutput() << RESET <<" to  a Double "  << std::endl;
-    return this;
+        if (_output == "nan" || _output == "inf")
+            std::cout << "double: " << std::stod(_output) << std::endl;
+        else try { std::cout << "double: " << std::fixed << std::setprecision(1) << std::stod(_output) << std::endl; }/* stod: Convert string to double*/
+        catch (std::exception &e) { std::cout << "double: impossible" << std::endl; }
+        return this;
+     
     
 }
 
@@ -109,6 +122,10 @@ Convert* Convert::toFloat(){
 
 
     std::cout << " We want to convert " << YELLOW <<GetOutput() << RESET <<" to  a Float "  << std::endl;
+    if (_output == "nan" || _output == "inf")
+        std::cout << "float: " << std::stof(_output) << "f" << std::endl;
+    else try { std::cout << "float: " << std::fixed << std::setprecision(1) << std::stof(_output) << "f"<< std::endl; } /* stod: Convert string to double*/
+        catch (std::exception &e) { std::cout << "float: impossible"; }
     return this;
     
 }

@@ -5,14 +5,16 @@
 #                                                      +:+                     #
 #    By: sfeith <sfeith@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/02/23 15:27:57 by sfeith        #+#    #+#                  #
-#    Updated: 2021/02/24 10:51:39 by sfeith        ########   odam.nl          #
+#    Created: 2021/02/23 12:27:30 by sfeith        #+#    #+#                  #
+#    Updated: 2021/02/23 13:42:41 by sfeith        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	=		Identifyrealtype
 
-SRC		=		main.cpp Base.cpp
+
+NAME 	=		Serialization
+
+SRC		=		main.cpp 
 
 OBJ 	=		$(SRC:.cpp=.o)
 
