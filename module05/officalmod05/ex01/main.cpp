@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/16 19:39:23 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/18 14:15:18 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/02/26 12:38:44 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ std::cout << BBLACK<< "****** Test with michel ****" << RESET<< std::endl;
 		}
 	}
     std::cout << BBLACK<< "****** now we test wit decrementing ****" << RESET<< std::endl;  
-	// Grade too low after decrement
 	{
 		try
 		{
@@ -83,38 +82,41 @@ std::cout << BBLACK<< "****** Test with michel ****" << RESET<< std::endl;
 		catch (std::exception& e) {
 			std::cerr << RED << "••••STOP : " << e.what() << RESET << std::endl;
 		}
-	
-	// Form with too high grade
+
+		
+	std::cout << BBLACK<< "****** now we test the forms ****" << RESET<< std::endl;  
+	std::cout << YELLOW<< "****** to high ****" << RESET<< std::endl;  
 	{
 		try
 		{
-			Form	hollidayForm("Holliday Form", 0, 50);
-			std::cout << "You should not see this" << std::endl;
+			Form	Regular("regularTOHIGH", 0, 50);
+			
 		}
 		catch(std::exception& e) {
-			std::cerr << "Error : " << e.what() << std::endl;
+			std::cerr << "STOP : " << e.what() << std::endl;
 		}
 	}
 
-	// Form with too low grade
+	std::cout << YELLOW<< "****** to low ****" << RESET<< std::endl;  
 	{
 		try
 		{
-			Form	hollidayForm("Holliday Form", 50, 151);
-			std::cout << "You should not see this" << std::endl;
+			Form	Regular("regularTOLOW", 50, 151);
+			
 		}
 		catch(std::exception& e) {
-			std::cerr << "Error : " << e.what() << std::endl;
+			std::cerr << "STOP : " << e.what() << std::endl;
 		}
 	}
 
-	// Bureaucrat has too low grade to sign form
+	 
+	std::cout << YELLOW<< "****** regualar form ****" << RESET<< std::endl;  
 	{
 		try
 		{
-			Bureaucrat	Omar;
+			Bureaucrat	Omar("Omar", 70);
 			Form		form("Regular Form", 50, 50);
-
+			std::cout << YELLOW<< "****** omar will sign the form****" << RESET<< std::endl;  
 			Omar.signForm(form);
 		}
 		catch(std::exception& e) {
@@ -122,7 +124,7 @@ std::cout << BBLACK<< "****** Test with michel ****" << RESET<< std::endl;
 		}
 	}
 
-	// Everything is fine
+	
 	{
 		try
 		{
@@ -130,7 +132,6 @@ std::cout << BBLACK<< "****** Test with michel ****" << RESET<< std::endl;
 			Form		form("Standard Form", 50, 50);
 
 			Eva.signForm(form);
-			std::cout << "Everything is a-OK!" << std::endl;
 		}
 		catch(std::exception& e) {
 			std::cerr << BBLUE <<"STOP : " << e.what() << std::endl;

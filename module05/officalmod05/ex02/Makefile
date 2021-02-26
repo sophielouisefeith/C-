@@ -3,16 +3,18 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: sfeith <sfeith@student.codam.nl>             +#+                      #
+#    By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/02/26 15:23:47 by sfeith        #+#    #+#                  #
-#    Updated: 2021/02/26 15:24:26 by sfeith        ########   odam.nl          #
+#    Created: 2021/02/16 20:20:49 by SophieLouis   #+#    #+#                  #
+#    Updated: 2021/02/26 14:20:52 by sfeith        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	=		array
 
-SRC		=		main.cpp 
+NAME 	=		MommyWhenIGrowup
+
+SRC		=		Bureaucrat.cpp Form.cpp main.cpp ShrubberyCreationForm.cpp \
+				RobotomyRequestForm.cpp
 
 OBJ 	=		$(SRC:.cpp=.o)
 

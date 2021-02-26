@@ -6,13 +6,14 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/17 14:30:53 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/26 12:06:33 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/02/26 14:26:03 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
-Form::Form(std::string name, int signGrade, int executeGrade): _name(name), _signGrade(signGrade), _executeGrade(executeGrade) 
+Form::Form(std::string name, int signGrade, int executeGrade, std::string(target)): _name(name), _signGrade(signGrade), _executeGrade(executeGrade), _target(target)
 {
 	if (this->_signGrade < 1 || this->_executeGrade < 1)
 		throw Form::GradeTooHighException();
@@ -64,7 +65,7 @@ int			Form::getExecutGrade(void) const
 void		Form::beSigned(Bureaucrat const & rhs)
 {
 	if (this->_signed == 1)
-		throw FormAlreadySigned();
+		throw FormAl();
 	else if (rhs.getGrade() <= this->_signGrade)
 		this->_signed = 1;
 	else
@@ -88,4 +89,15 @@ std::ostream & operator<<(std::ostream & stream, Form const & form)
 		<< form.getExecutGrade() 
 		<< " is not signed" << std::endl; 
 	return (stream);
+}
+
+
+std::string Form::getTarget(void) const
+{
+	return (this->_target);
+}
+
+int			Form::getGradeExecute(void) const
+{
+	return (this->_gradeExecute);
 }
