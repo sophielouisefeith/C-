@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/16 19:39:18 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/17 13:30:57 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 11:31:06 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,9 @@ int			Bureaucrat::getGrade(void) const
 	return (this->_grade);
 }
 
-void		Bureaucrat::incGrade(int i)  //-
+//-
+
+void		Bureaucrat::incGrade(int i)  
 {
     
     if (_grade - i < 1)
@@ -82,7 +84,10 @@ void		Bureaucrat::incGrade(int i)  //-
     
 }
 
-void		Bureaucrat::decGrade(int i) //+
+
+//+
+
+void		Bureaucrat::decGrade(int i) 
 {
 	if (_grade + i > 150)
 		throw GradeTooLowException();
