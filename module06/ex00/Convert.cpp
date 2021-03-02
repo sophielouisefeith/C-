@@ -6,7 +6,7 @@
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/19 13:00:06 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/03/02 12:39:00 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/03/02 17:40:48 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Convert::Convert(std::string const &output) : _output(output) {
     
     
     std::cout << BLUE << "Here we get the input: " << YELLOW << this->GetOutput()  <<  RESET << std::endl;  
-    //return(*this);
+    
 }
 
 
@@ -38,7 +38,8 @@ Convert::Convert(Convert const & copy){
 Convert &Convert:: operator=(const Convert & rsh){
     
     std::cout << " Assignation is called ----- Output"  << std::endl;
-    if(this != &rsh){  // if rsh is not filled 
+    // if rsh is not filled 
+    if(this != &rsh){  
         this->_output = rsh.GetOutput();  // why the . we fill the right side . with the result of getName
     }
     

@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/28 13:10:08 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 14:26:48 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 16:43:19 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 ZombieHorde::ZombieHorde(int N) : _count(N)
 {
+	if( N <= 0)
+		return
 	_zombies = new Zombie[N];
     std::string tip[5] = {
 	"lazy","doush","sweet","useless","old"};

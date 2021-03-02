@@ -6,11 +6,12 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/02 14:46:40 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 14:46:42 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 17:32:06 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "span.hpp"
+#include "Span.hpp"
+
 #include "list"
 
 Span::Span() {}

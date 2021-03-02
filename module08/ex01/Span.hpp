@@ -6,12 +6,11 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/02 14:46:55 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 14:46:57 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 17:25:53 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPAN_HPP
-# define SPAN_HPP
+#pragma once 
 
 #include <iostream>
 #include <vector> 
@@ -52,6 +51,5 @@ class Span{
 		unsigned int _N;
 		std::vector<int> _container;
 		unsigned int _index;
-} ;
+};
 
-#endif

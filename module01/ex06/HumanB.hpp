@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/28 13:06:48 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/01/28 21:12:39 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 16:42:57 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class HumanB
 {
     public:
         HumanB();
-        HumanB(std::string name, Weapon &weapon);
         HumanB(std::string name);
         ~HumanB();
         void        setWeapon(Weapon &revalueType);

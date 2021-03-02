@@ -6,11 +6,11 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/02 14:46:09 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 14:46:11 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 17:28:48 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "span.hpp"
+#include "Span.hpp"
 
 int main(){
 	Span sp1 = Span(5);

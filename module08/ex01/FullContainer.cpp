@@ -6,9 +6,11 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/02 14:45:55 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 14:45:57 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 17:27:26 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Span.hpp"
 
 Span::FullContainer::FullContainer() throw() {}
 Span::FullContainer::~FullContainer() throw() {}

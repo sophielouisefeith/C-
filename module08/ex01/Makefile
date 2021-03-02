@@ -6,13 +6,13 @@
 #    By: sfeith <sfeith@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/03/02 16:49:31 by sfeith        #+#    #+#                  #
-#    Updated: 2021/03/02 16:49:51 by sfeith        ########   odam.nl          #
+#    Updated: 2021/03/02 17:33:42 by sfeith        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	=		Easyfind
+NAME 	=		Span
 
-SRC		=		main.cpp 
+SRC		=		main.cpp FullContainer.cpp Span.cpp NoSpan.cpp
 
 OBJ 	=		$(SRC:.cpp=.o)
 
