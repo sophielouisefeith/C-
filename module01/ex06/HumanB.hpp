@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/28 13:06:48 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 16:42:57 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/03/02 17:43:50 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class HumanB
     
         
     private:
-        Weapon*   _Weapon;
+        Weapon*   _Weapon; // use a pointer we later get the weapon
         std::string _name;
 
    
