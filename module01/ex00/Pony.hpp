@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/06 11:18:46 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/01/14 14:55:47 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 12:23:13 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,11 @@ class Pony
     private:
         std::string  _SoundName;
         int         _ColorCode;
-        //Pony();
     public:
         Pony(); //constructord
         ~Pony(); // deconstructory
         Pony(std::string SoundName, int ColorCode);
-   // std::string getSoundName() const;
-   // int         getColorCode() const;
-    
-    //  void     PonyOnTheHeap();
-    // void     PonyOnTheStack();       
-    //void     PonyHeap(float ColorCode , const std::string &SoundName);
+
         std::string  GetSoundName()const;
         int          GetColorCode()const;
         void    Sound();

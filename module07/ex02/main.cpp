@@ -6,22 +6,17 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/26 15:23:44 by sfeith        #+#    #+#                 */
+<<<<<<< HEAD
 /*   Updated: 2021/03/02 12:58:02 by SophieLouis   ########   odam.nl         */
+=======
+/*   Updated: 2021/03/02 12:55:37 by sfeith        ########   odam.nl         */
+>>>>>>> c474b0abfc217205b83c6c9ecd2789ae1131ad2f
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-class Awesome
-{
-	public:
-	Awesome( void ) : _n( 42 ) { return; }
-	int get( void ) const { return this->_n; }
-	private:
-	int _n;
 
-	
-};
 
 int main(void){
 
