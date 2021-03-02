@@ -6,7 +6,7 @@
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/19 13:00:06 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/23 12:01:17 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/03/02 12:39:00 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ Convert* Convert::toChar(){
     }
     /*has to be no nan inf inf */
     else if(_output == "nan" || _output == "+inf" || _output == "-inf")
-   // || _output.find('.') != std::string::npos) even later naar kijken wel of niet aan.
 		    std::cout << "char: impossible" << std::endl;
     else 
         try{

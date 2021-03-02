@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/16 19:39:23 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 18:18:13 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/02 11:49:47 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 int main()
 {
 	Intern  someRandomIntern;
-	Form*   rrf;
-	rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
-	std::cout << rrf->getTarget() << std::endl ;
-	rrf = someRandomIntern.makeForm("Fake News", "Amerika");
+	Form*   nameform;
+	nameform = someRandomIntern.makeForm("welcome form", "her team");
+	std::cout << nameform->getTarget() << std::endl ;
+	nameform = someRandomIntern.makeForm("sick form", "newstaff");
 	
 }
