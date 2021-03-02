@@ -5,26 +5,26 @@
 /*                                                     +:+                    */
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/16 19:39:23 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 18:18:13 by SophieLouis   ########   odam.nl         */
+/*   Created: 2021/02/28 14:42:48 by SophieLouis   #+#    #+#                 */
+/*   Updated: 2021/03/01 20:23:49 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "Intern.hpp"
-#include <iostream> 
+#include "replace.hpp"
 
 
-
-int main()
+int main(int argc, char **argv)
 {
-	Intern  someRandomIntern;
-	Form*   rrf;
-	rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
-	std::cout << rrf->getTarget() << std::endl ;
-	rrf = someRandomIntern.makeForm("Fake News", "Amerika");
+	if (argc != 4)
+	{
+		std::cout <<YELLOW <<" 3 arguments required " << RESET << std::endl ;
+		return (-1);
+	}
 	
+	std::string filename = argv[1];
+	std::string s1 = argv[2];
+	std::string s2 = argv[3];
+	if (prepare(filename, s1, s2) == false)
+		return (-1);
+	return (0);
 }

@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   replace.hpp                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/16 19:39:23 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 18:18:13 by SophieLouis   ########   odam.nl         */
+/*   Created: 2021/02/28 14:44:59 by SophieLouis   #+#    #+#                 */
+/*   Updated: 2021/03/01 20:19:53 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "Intern.hpp"
-#include <iostream> 
+#pragma once
 
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include "Color.hpp"
 
-
-int main()
-{
-	Intern  someRandomIntern;
-	Form*   rrf;
-	rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
-	std::cout << rrf->getTarget() << std::endl ;
-	rrf = someRandomIntern.makeForm("Fake News", "Amerika");
-	
-}
+bool new_file(const std::string file_name, std::string &buffer);
+bool replace_string(const std::string file_name, std::string &buffer, const std::string s1, const std::string s2);	//perse &?
+bool prepare(const std::string file_name, const std::string s1, const std::string s2);		//reference zodat ze niet leeg zijn

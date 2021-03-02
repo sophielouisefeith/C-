@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/21 13:17:07 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 13:47:51 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/02/28 14:16:17 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ class Zombie
     public:
     Zombie();
     ~Zombie();
-	std::string		getName( void ) const;
-	std::string		getType( void ) const;
 	void			setName(std::string newName);
 	void			setType(std::string newType);
     Zombie(std::string name, std::string type);

@@ -6,14 +6,13 @@
 #    By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/01/21 13:33:36 by SophieLouis   #+#    #+#                  #
-#    Updated: 2021/02/28 13:28:39 by SophieLouis   ########   odam.nl          #
+#    Updated: 2021/02/28 14:27:14 by SophieLouis   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME 	=		make_a_zombie
-
-SRC		=		main.cpp Zombie.cpp ZombieEvent.cpp
+NAME 	=		MoarBrainz
+SRC		=		main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJ 	=		$(SRC:.cpp=.o)
 
