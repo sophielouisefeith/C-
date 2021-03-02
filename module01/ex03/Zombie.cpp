@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/21 13:17:09 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 13:47:27 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/02/28 14:15:44 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,14 @@
 //*
 
 
-
 Zombie::Zombie(void) {}
 Zombie::~Zombie(void) {}
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {}
+void Zombie::setName(std::string name) { this->_name = name; }
 
-std::string names[5] = {
-	"mucks",
-	"pertk",
-	"veral",
-	"stlab",
-	"Conrad"
-} ;
+void Zombie::setType(std::string type) { this->_type = type; }
 
-void Zombie::announce(void)
+void Zombie::announce()
 {
-	std::cout << "This is " << _name << " the " << _type << " zombie." << std::endl ;
-}
-
-std::string Zombie::RandomChump(void)
-{
-	srand(time(NULL));
-	int i = rand() % 5;
-	return (names[i]);
+		std::cout << "This is " << _name << " a " << _type << " zombie." <<std::endl ;
 }

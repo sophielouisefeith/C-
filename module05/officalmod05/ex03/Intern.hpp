@@ -3,31 +3,28 @@
 /*                                                        ::::::::            */
 /*   Intern.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
+/*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/26 14:05:47 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/26 14:05:56 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/02/28 18:08:59 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once 
 
 #include <iostream>
-#include "RobotomyRequestForm.hpp"
+#include "Form.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
-class Form;
 
 class Intern {
-private:
-public:	
-	Intern(void);
-	Intern(Intern const & copy);
-	Intern const & operator=(Intern const & rhs);
-	~Intern(void);
-	Form*	makeRobotomy(std::string target);
-	Form*	makePresidential(std::string target);
-	Form*	makeShrubbery(std::string target);
-	Form*	makeForm(std::string name, std::string target);
-};
+	public:
+		Intern();
+		~Intern();
+		Intern(const Intern&);
+		Intern &operator=(const Intern&);
+
+		Form *makeForm(const std::string &formName, const std::string &target) ;
+} ;

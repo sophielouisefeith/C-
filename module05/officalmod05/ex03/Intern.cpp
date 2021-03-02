@@ -3,74 +3,65 @@
 /*                                                        ::::::::            */
 /*   Intern.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
+/*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/26 14:05:43 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/26 14:06:20 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/02/28 18:09:20 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
+#include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "Form.hpp"
+#include <string>
 
-Intern::Intern(void)
-{
-	return ;
+static Form *createPresident(const std::string &target);
+static Form *createRobot(const std::string &target);
+static Form *createShrub(const std::string &target);
+		
+Intern::Intern() {}
+Intern::~Intern() {}
+
+Intern::Intern(const Intern&) {}
+
+Intern &Intern::operator=(const Intern&) {{return *this;}}
+
+Form *createPresident(const std::string &target){
+	return new PresidentialPardonForm(target);
 }
 
-Intern::Intern(Intern const & copy)
-{
-	if (&copy != this)
-	{
-		*this = copy;
-	}
-	return ;
+Form *createRobot(const std::string &target){
+	return new RobotomyRequestForm(target);
 }
 
-Intern const & Intern::operator=(Intern const & rhs)
-{
-	if (&rhs != this)
-	{
-		*this = rhs;
-	}
-    return (*this);
+Form *createShrub(const std::string &target){
+	return new ShrubberyCreationForm(target);
 }
 
-Intern::~Intern(void)
-{
-	return ;
-}
-
-Form*		Intern::makeRobotomy(std::string target)
-{
-	return (new RobotomyRequestForm(target));
-}
-
-Form*		Intern::makePresidential(std::string target)
-{
-	return (new PresidentialPardonForm(target));
-}
-
-Form*		Intern::makeShrubbery(std::string target)
-{
-	return (new ShrubberyCreationForm(target));
-}
-
-Form*		Intern::makeForm(std::string name, std::string target)
-{
-	std::string Names[3] = {"robotomy request", "shrubbery creation", "presidential pardon"};
-	Form* (Intern:: *function_array[3])(std::string target) = {
-		&Intern::makeRobotomy,
-		&Intern::makeShrubbery,
-		&Intern::makePresidential
-	};
-	for (int i = 0; i < 3; i++)
-	{
-		if (name == Names[i])
-		{
-			std::cout << "Intern creates " << name << std::endl;
-			return ((this->*function_array[i])(target));
+Form *Intern::makeForm(const std::string &formName, const std::string &target) {
+	Form *ret = NULL;
+	typedef Form*(*funct)(const std::string &target);
+	typedef struct {
+		std::string form_name;
+		funct func;
+	} formTypes ;
+	
+	formTypes forms[3] = {
+		{"Presidential Pardon", &createPresident},
+		{"robotomy request", &createRobot},
+		{"shrubbery creation", &createShrub}
+	} ;
+	
+	for (int i = 0; i < 1 ; i++){
+		if(forms[i].form_name == formName){
+			ret = forms[i].func(target);
+			std::cout << "The intern creates " << formName << std::endl ;
+			return ret;
 		}
+		std::cout << "The intern is not able to create " << formName << " because he just started working here." << std::endl ;
 	}
-	std::cout << name << " not found" << std::endl;
-	return (NULL);
+	return NULL;
 }

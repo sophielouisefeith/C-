@@ -5,15 +5,14 @@
 #                                                      +:+                     #
 #    By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/01/21 13:33:36 by SophieLouis   #+#    #+#                  #
-#    Updated: 2021/02/28 13:28:39 by SophieLouis   ########   odam.nl          #
+#    Created: 2021/02/28 14:46:54 by SophieLouis   #+#    #+#                  #
+#    Updated: 2021/03/01 20:10:22 by SophieLouis   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
+NAME 	=		replace
 
-NAME 	=		make_a_zombie
-
-SRC		=		main.cpp Zombie.cpp ZombieEvent.cpp
+SRC		=		main.cpp replace.cpp 
 
 OBJ 	=		$(SRC:.cpp=.o)
 

@@ -6,7 +6,7 @@
 #    By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/02/16 20:20:49 by SophieLouis   #+#    #+#                  #
-#    Updated: 2021/02/26 14:20:52 by sfeith        ########   odam.nl          #
+#    Updated: 2021/02/28 18:32:54 by SophieLouis   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME 	=		MommyWhenIGrowup
 
 SRC		=		Bureaucrat.cpp Form.cpp main.cpp ShrubberyCreationForm.cpp \
-				RobotomyRequestForm.cpp
+				RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 OBJ 	=		$(SRC:.cpp=.o)
 

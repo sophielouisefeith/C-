@@ -6,27 +6,26 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/21 13:17:12 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/01/22 15:23:50 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/02/28 13:44:51 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef ZOMBIEEVENT_HPP
+# define ZOMBIEEVENT_HPP
+
+#include "iostream"
 #include "Zombie.hpp"
 
-# include <iostream>
+class ZombieEvent{
+	public:
+		ZombieEvent(void);
+		~ZombieEvent(void);
+		
+		void setZombieType(std::string type);
+		Zombie *newZombie(std::string name);
 
-class ZombieEvent
-{
-    public:
-        ZombieEvent();
-        ~ZombieEvent();
-        void   setZombieType(std::string type);
-        Zombie*  newZombie(std::string name);
-        void RandomChump();
-
-    private:
-        std::string ZombieType;
-};
+	private:
+		std::string _type;
+} ;
 
 #endif

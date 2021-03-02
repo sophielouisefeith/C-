@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.cpp                                           :+:    :+:            */
+/*   ZombieHorde.hpp                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/02/16 19:39:23 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/28 18:18:13 by SophieLouis   ########   odam.nl         */
+/*   Created: 2021/02/28 13:10:12 by SophieLouis   #+#    #+#                 */
+/*   Updated: 2021/02/28 13:26:08 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "Intern.hpp"
-#include <iostream> 
+#pragma once
 
+#include "Zombie.hpp"
+#include <iostream>
 
-
-int main()
+class ZombieHorde
 {
-	Intern  someRandomIntern;
-	Form*   rrf;
-	rrf = someRandomIntern.makeForm("Presidential Pardon", "Bender");
-	std::cout << rrf->getTarget() << std::endl ;
-	rrf = someRandomIntern.makeForm("Fake News", "Amerika");
-	
-}
+
+    public:
+
+    ZombieHorde();
+    ZombieHorde(int N);
+    /* same as in zombieevent */
+    void RandomChump();
+	void announce();
+    ~ZombieHorde();
+
+    private:
+		Zombie *_zombies;
+		int _count;
+       
+};
