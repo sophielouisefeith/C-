@@ -1,0 +1,1 @@
+clear ; clang++ -Wall -Werror -Wextra AMateria.cpp Character.cpp Cure.cpp Ice.cpp main.cpp MateriaSource.cpp; ./a.out

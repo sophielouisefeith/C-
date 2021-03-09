@@ -1,0 +1,1 @@
+clang++ -Wall -Werror -Wextra Character.cpp Enemy.cpp AWeapon.cpp PlasmaRifle.cpp PowerFist.cpp RadScorpion.cpp SuperMutant.cpp main.cpp ; ./a.out

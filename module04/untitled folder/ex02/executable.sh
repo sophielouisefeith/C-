@@ -1,0 +1,1 @@
+clang++ -Wall -Werror -Wextra AssaultTerminator.cpp main.cpp Squad.cpp TacticalMarine.cpp ; ./a.out
