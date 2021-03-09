@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/28 14:39:08 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/01 20:22:49 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/04 11:31:08 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ bool replace_string(const std::string file_name, std::string &buffer, const std:
 
 bool prepare(const std::string file_name, const std::string s1, const std::string s2)		//reference zodat ze niet leeg zijn
 {
+
+	/* prepare the file */
 	std::ifstream file(file_name);
 	std::stringstream loading;
 	std::string buffer;

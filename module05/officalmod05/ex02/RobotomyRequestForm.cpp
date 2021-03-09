@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   RobotomyRequestForm.cpp                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
+/*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/26 13:40:44 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/02/26 13:54:40 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/03/04 14:26:26 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,13 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		std::cout << "can't be executed because: ";
 		throw Form::GradeTooLowException();
 	}
+	int random = 0;
 	std::cout << "DRILL SOUND" << std::endl;
-	// if (random == 0)
-	// {
-	// 	srand(time(NULL));
-	// 	random = 1;
-	// }
+	if (random == 0)
+	{
+		srand(time(NULL));
+		random = 1;
+	}
 	if (rand() % 2 == 0)
 	{
 		std::cout << this->getTarget() << " has been robotomized succesfully" << std::endl;

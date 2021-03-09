@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   mutanstack.cpp                                     :+:    :+:            */
+/*   Mutanstack.cpp                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/02 14:48:36 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 14:48:45 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/08 13:43:40 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Mutanstack.hpp"
 
 template <typename T>
 MutantStack<T>::MutantStack(const MutantStack<T> &copy): std::stack<T>(copy) {

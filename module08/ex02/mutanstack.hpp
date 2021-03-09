@@ -6,12 +6,11 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/02 14:48:54 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 14:48:56 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/08 13:43:10 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MUTANTSTACK_HPP
-# define MUTANTSTACK_HPP
+#pragma once 
 
 #include <iostream>
 #include <iterator>
@@ -37,4 +36,3 @@ class MutantStack : public std::stack<T> {
 		}
 } ;
 
-#endif

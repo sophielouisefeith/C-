@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/26 15:23:44 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/03/02 13:54:02 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/03/05 10:20:12 by SophieLouis   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 
 int main(){
-	Array<int> test1(3);
+	Array<int> test1(7);
 	std::cout << YELLOW << " INT "<< RESET << std::endl ;
 	
 	try {
