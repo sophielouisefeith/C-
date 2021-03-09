@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/28 13:10:08 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/03/02 17:43:43 by sfeith        ########   odam.nl         */
+/*   Updated: 2021/03/09 13:01:19 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ ZombieHorde::ZombieHorde(int N) : _count(N)
 }
 
 ZombieHorde::~ZombieHorde(void) {
-	delete[] _zombies;}
+	delete[] _zombies;
+	}
 
 std::string names[5] = {
 	"jtiks","mero","Lover","Listo","Lunett"
