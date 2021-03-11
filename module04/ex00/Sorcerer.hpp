@@ -45,8 +45,8 @@ public:
 
 	std::string 	getName() const;
 	std::string 	getTitle() const;
-    void            polymorph(Victim const &) const;
-    void			polymorph(Peon const &) const;
+    void            polymorph(Victim const &victim);
+   	//virtual void	polymorph(Peon const &peon);
 };
 
 std::ostream & operator<<(std::ostream & o, Sorcerer const & sorcerer);

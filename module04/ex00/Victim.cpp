@@ -6,11 +6,12 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/11 15:34:01 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/11 16:59:25 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/09 15:29:51 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Victim.hpp"
+#include "Peon.hpp"
 
 /* start colonial */
 
@@ -23,7 +24,7 @@ Victim::Victim(){
 }
 
 
-Victim::Victim(std::string const &name):_name(name){
+Victim::Victim(std::string name):_name(name){
 
     std::cout << BLUE << "Some random victom called " << this->getName() << " just appeard" <<  RESET << std::endl;  
 }
@@ -78,7 +79,8 @@ std::ostream &operator<<(std::ostream &o, const Victim &victim) {
 
 /*  the Victim is been polymorphed by the sorcerer */
 
-void    Victim::getPolymorphed(void)const{
+void    Victim::getpolymorphed(void)const{
+    
     std::cout << YELLOW<< this->getName() << " has been turned into a cute little sheep" << RESET << std::endl;
     
 }

@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/11 13:46:55 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/11 15:33:06 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/09 15:27:47 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,10 @@ Sorcerer::Sorcerer(const Sorcerer &src) {
 Sorcerer &Sorcerer::operator=(const Sorcerer &rsh){
     
     std::cout << YELLOW << " Assignation is called ----- Sorcerer" << RESET << std::endl;
-    if(this != &rsh){  // if rsh is not filled 
-        this->_name = rsh.getName();  // why the . we fill the right side . with the result of getName
-        this->_title = rsh.getTitle();
+    if(this != &rsh){  // if rsh is not filled
+        return *this;
+    this->_name = rsh._name;  // why the . we fill the right side . with the result of getName
+    this->_title = rsh._title;
     }
     
     return *this;
@@ -63,6 +64,16 @@ Sorcerer::~Sorcerer(){
 }
 
 /* end colonial */
+
+
+void Sorcerer::polymorph(Victim const &victim){
+	victim.getpolymorphed();
+}
+
+// void Sorcerer::polymorph(Peon const &peon){
+// 	peon.getPolymorphed();
+// }
+
 
 /* getters */
 std::string     Sorcerer::getName() const{
@@ -82,6 +93,7 @@ std::ostream &operator<<(std::ostream &o, const Sorcerer &sorcerer) {
     o << YELLOW << " I am" 
     << sorcerer.getName() 
     << ", " << sorcerer.getTitle() 
-    << ", and like ponies" << RESET << std::endl;
+    << ", and i like ponies" << RESET << std::endl;
     return o;
 }
+

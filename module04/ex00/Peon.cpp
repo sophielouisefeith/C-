@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/11 17:04:24 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/11 17:40:16 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/09 15:16:24 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ Peon::~Peon(){
     return;
 }
 
-void    Peon::polymorph(void)const{
-    std::cout << YELLOW<< this->getName() << " has been turned into a pink pony" << RESET << std::endl;
+
+void    Peon::Getpolymorphed(void)const{
+    std::cout << YELLOW<< this->getName() << " has been turned into a pink pony (polymorphezed)" << RESET << std::endl;
     
 }

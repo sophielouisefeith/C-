@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/06 11:18:52 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/01/21 13:08:15 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/11 11:01:10 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,12 @@ static void	PonyOnTheHeap(void) {
 static void PonyOnTheStack(void){
     
     std::cout << "Pony on the Stack" << std::endl;
-    Pony *HeapPony = new Pony(" a flower", 144 );
+    /* we don't use new and no pointer */
+    Pony StackPony(" a flower", 144 );
     std::cout << "Her name is" << std::endl;
-    HeapPony->Sound();
+    StackPony.Sound();
     std::cout << "Her color is" << std::endl;
-    HeapPony->Colortype();
+    StackPony.Colortype();
 	std::cout << "Exit Pony on the Stack" << std::endl;
     
     

@@ -3,16 +3,18 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                      #
+#    By: sfeith <sfeith@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/02/11 13:37:01 by SophieLouis   #+#    #+#                  #
-#    Updated: 2021/03/09 14:19:41 by sfeith        ########   odam.nl          #
+#    Created: 2021/03/09 15:39:58 by sfeith        #+#    #+#                  #
+#    Updated: 2021/03/11 14:57:13 by sfeith        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	=		Polymorpism
 
-SRC		=		Peon.cpp Victim.cpp Sorcerer.cpp main.cpp 
+NAME 	=		settheworldonfire
+
+SRC		=		main.cpp AWeapon.cpp PlasmaRifle.cpp Character.cpp \
+				PowerFist.cpp Enemy.cpp SuperMutant.cpp RadScorpion.cpp
 
 OBJ 	=		$(SRC:.cpp=.o)
 

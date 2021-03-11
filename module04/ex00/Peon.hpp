@@ -6,7 +6,7 @@
 /*   By: SophieLouiseFeith <SophieLouiseFeith@st      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/11 17:04:27 by SophieLouis   #+#    #+#                 */
-/*   Updated: 2021/02/11 17:28:52 by SophieLouis   ########   odam.nl         */
+/*   Updated: 2021/03/09 15:19:34 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@
  /*        victim         */
  /*    peon   |           */
 
-class Peon : public Victim {
+class Peon :  public Victim {
 
 public:
 
     Peon();
     Peon(std::string const & name);
-	~Peon();
+	virtual ~Peon();
 	Peon(Peon const & src);
 	Peon & operator=(Peon const & rhs);
     
-    void polymorph(void) const;
+    void Getpolymorphed(void) const;
     
 };
