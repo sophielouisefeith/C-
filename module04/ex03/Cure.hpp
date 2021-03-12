@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Squad.hpp                                          :+:    :+:            */
+/*   Cure.hpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/12 11:52:33 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/03/12 14:14:43 by sfeith        ########   odam.nl         */
+/*   Created: 2021/03/12 15:01:31 by sfeith        #+#    #+#                 */
+/*   Updated: 2021/03/12 15:03:45 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include "ISquad.hpp"
 
-class Squad : public ISquad {
+#include "AMateria.hpp"
+
+class Cure : public AMateria {
 	public:
-		Squad();
-		virtual ~Squad();
-		Squad(const Squad &copy);
+		Cure();
+		virtual ~Cure();
+		Cure(const Cure &copy);
 
-		Squad &operator=(const Squad &current);
-
-		int getCount() const;
-		/* get the unit from spacemarine  */
-		ISpaceMarine* getUnit(int n) const; 
-		int push(ISpaceMarine* unit);
-
-	private:
-		int _count;
-		ISpaceMarine **_units;
+		Cure &operator=(const Cure &);
+		AMateria *clone() const;
+		void use(ICharacter &target);
 } ;
+
+#endif

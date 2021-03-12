@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Squad.hpp                                          :+:    :+:            */
+/*   Charachter.hpp                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: sfeith <sfeith@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/12 11:52:33 by sfeith        #+#    #+#                 */
-/*   Updated: 2021/03/12 14:14:43 by sfeith        ########   odam.nl         */
+/*   Created: 2021/03/12 15:05:44 by sfeith        #+#    #+#                 */
+/*   Updated: 2021/03/12 15:05:54 by sfeith        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#pragma once 
 
 #include <iostream>
-#include "ISquad.hpp"
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class Squad : public ISquad {
+class Character : public ICharacter {
 	public:
-		Squad();
-		virtual ~Squad();
-		Squad(const Squad &copy);
+		Character(const std::string &name);
+		~Character();
+		Character(const Character &copy);
+		Character &operator=(const Character &);
 
-		Squad &operator=(const Squad &current);
-
-		int getCount() const;
-		/* get the unit from spacemarine  */
-		ISpaceMarine* getUnit(int n) const; 
-		int push(ISpaceMarine* unit);
-
+		std::string const &getName() const;
+		void equip(AMateria *amateria);
+		void un_equip(int i);
+		void use(int i, ICharacter &target);
 	private:
-		int _count;
-		ISpaceMarine **_units;
+		std::string _name;
+		AMateria* _invent[4];
 } ;

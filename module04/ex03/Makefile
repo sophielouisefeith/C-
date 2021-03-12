@@ -5,14 +5,15 @@
 #                                                      +:+                     #
 #    By: sfeith <sfeith@student.codam.nl>             +#+                      #
 #                                                    +#+                       #
-#    Created: 2021/03/11 14:33:04 by sfeith        #+#    #+#                  #
-#    Updated: 2021/03/12 12:11:16 by sfeith        ########   odam.nl          #
+#    Created: 2021/03/12 14:41:40 by sfeith        #+#    #+#                  #
+#    Updated: 2021/03/12 15:11:21 by sfeith        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	=		Purifyit
 
-SRC		=		main.cpp AssaultTerminator.cpp TacticalMarine.cpp Squad.cpp 
+NAME 	=		BocalFantasy
+
+SRC		=		AMateria.cpp Character.cpp Cure.cpp Ice.cpp main.cpp MateriaSource.cpp
 
 OBJ 	=		$(SRC:.cpp=.o)
 
