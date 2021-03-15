@@ -20,9 +20,9 @@
 
 
 
-/*                                 Character                                     */
-/*              Aweapon                             Enemy                        */
-/*    plasmarifle  |  Powerfirst          SuperMutant  | RadScorpion              */
+/*                                 Character                  Enemy                   */
+/*              Aweapon                                                */
+/*    plasmarifle  |  Powerfirst             SuperMutant  | RadScorpion              */
 
 
 #include <iostream>
@@ -32,17 +32,23 @@
 int main(void) {
     
 	Character* me = new Character("me"); 
+	Character* so = new Character("so"); 
 	
-	std::cout << *me;
+	std::cout << *me;  // with the * roep je de overload operator aan van de output 
 	
 	Enemy* rad = new RadScorpion();
 	Enemy* super = new SuperMutant();
+
+	/* maak wapen aan nog niet verbonden aan character */
 	
 	AWeapon* plasma = new PlasmaRifle(); 
 	AWeapon* power = new PowerFist();
 	
+	/* je pakt een wapen op */
 	me->equip(plasma); 
+	so->equip(power); 
 	std::cout << *me; 
+	std::cout << *so; 
 	me->equip(power);
 	
 	me->attack(rad);

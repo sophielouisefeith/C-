@@ -15,6 +15,8 @@
 #include <iostream>
 #include "Enemy.hpp"
 
+//*this verwijst naar alle varable in je class 
+
 
 class RadScorpion : public Enemy{
     public:

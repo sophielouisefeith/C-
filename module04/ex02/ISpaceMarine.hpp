@@ -14,6 +14,11 @@
 
 #include <iostream>
 
+
+/*  dus deze is er eigenlijk voor de functies. */
+/* interface classes */ 
+
+
 class ISpaceMarine
 {
 public:

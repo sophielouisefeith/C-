@@ -73,6 +73,7 @@ int Character::getAP() const {
 }
 
 AWeapon *Character::getWeapon() const {
+	/*aweapon returned */
 	return this->_my_weapon; 
 }
 

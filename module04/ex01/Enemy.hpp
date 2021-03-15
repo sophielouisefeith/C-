@@ -23,7 +23,7 @@ class Enemy{
 public:
     Enemy();
     Enemy(int hp, std::string const & type);
-    virtual ~Enemy();
+    virtual ~Enemy(); /* hoeft*/
     Enemy(const Enemy &copy);
     Enemy &operator=(const Enemy &replace);
     

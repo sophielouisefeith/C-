@@ -24,6 +24,7 @@ RadScorpion::RadScorpion() : Enemy(80, "RadScorpion") {
 /* deconstructory */
 RadScorpion::~RadScorpion() {
 
+/* type eneemy moet ik ook sluiten hier  maar is virtual */
 
       std::cout << "* SPROTCH *" << std::endl;
 }
@@ -36,6 +37,7 @@ RadScorpion &RadScorpion::operator=(const RadScorpion &replace){
 	if (this == &replace)
 		return *this;
     /* why ? operator replace wat gebeurt hier  */
+	/*  in the enmey class are all the values therefore we have to get them from the enemy operator */
 	Enemy::operator=(replace);
 	return *this;
 
